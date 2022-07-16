@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "scripts": {
+    "docker:exec": "docker-compose exec backend",
+    "docker:status": "docker-compose ps",
+    "build": "docker-compose up --build",
+    "up": "docker-compose up",
+    "stop": "docker-compose stop",
+    "down": "docker-compose down",
+    "bash": "docker-compose exec backend bash",
+    "c": "docker-compose exec backend rails c",
+    "routes": "docker-compose exec backend rails routes",
+    "db:seed": "docker-compose exec backend rails db:seed",
+    "g:migration": "docker-compose exec backend rails g migration",
+    "db:migrate": "docker-compose exec backend rails db:migrate",
+    "db:rollback": "docker-compose exec backend rails db:rollback",
+    "db:reset": "docker-compose exec backend rails db:reset",
+    "rspec": "docker-compose exec -e RAILS_ENV=test backend rspec",
+    "rubocop": "docker-compose exec -e RAILS_ENV=test backend rubocop",
+    "audit": "docker-compose exec -e RAILS_ENV=test backend bundle-audit",
+    "brakeman": "docker-compose exec -e RAILS_ENV=test backend brakeman",
+    "linters": "docker-compose exec -e RAILS_ENV=test backend rspec && docker-compose exec -e RAILS_ENV=test backend rubocop && docker-compose exec -e RAILS_ENV=test backend bundle-audit && docker-compose exec -e RAILS_ENV=test backend brakeman",
+    "docs": "docker-compose exec -e SWAGGER_DRY_RUN=0 -e RAILS_ENV=test backend rails rswag",
+    "annotate": "docker-compose exec backend annotate"
+  },
+  "dependencies": {
+    "active_material": "^2.0.0"
+  }
+}

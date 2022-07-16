@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source "$(dirname $BASH_SOURCE)/common.sh"
+
+echo
+echo "Starting development server..."
+echo "-----------------------------------------"
+echo
+$DOCKER_COMPOSE up -d
+
+echo
+echo "Attaching to RAILS API..."
+echo "-----------------------------------------"
+echo
+docker attach "$(docker-compose ps -q backend)"
+
+echo
+echo "-----------------------------------------"
+echo "Cleaning up..."
+echo
+$DOCKER_COMPOSE stop

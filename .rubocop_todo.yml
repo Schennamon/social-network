@@ -1,0 +1,40 @@
+Metrics/BlockLength:
+  Max: 30
+  Exclude:
+    - 'config/environments/*.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'spec/swagger_helper.rb'
+    - 'spec/**/*.rb'
+
+Naming/FileName:
+  Exclude:
+    - 'config/initializers/rswag-ui.rb'
+
+Style/StringConcatenation:
+  Exclude:
+    - 'config/initializers/rswag_api.rb'
+
+Layout/LineLength:
+  Max: 140
+  Exclude:
+    - 'config/routes.rb'
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - 'spec/requests/api/**/*.rb'
+
+Style/SymbolProc:
+  Exclude:
+    - 'app/serializers/**/*.rb'
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'app/contracts/application_contract.rb'
+
+Rails/Output:
+  Exclude:
+    - 'db/seeds.rb'
+    - 'db/seeds/*.rb'

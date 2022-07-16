@@ -1,0 +1,22 @@
+---
+en:
+  errors:
+    cannot_update: You cannot update this data.
+    confirm: Plese confirm your email
+    invalid_request: Invalid Request
+    password:
+      invalid: Wrong email or password
+    token:
+      invalid: Invalid token
+    wrong_email: Wrong email
+  user_mailer:
+    registration_confirmation:
+      confirm_text: Confirm your email
+      subject: Confirm the registration.
+    reset_password:
+      reset_password_text: Create new password
+      subject: Forgot password
+  users:
+    confirmed_email: You have confirmed your email
+    deleted: User was deleted
+    password_updated: Password successfully updated
